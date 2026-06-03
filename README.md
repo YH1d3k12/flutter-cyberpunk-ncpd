@@ -1,17 +1,32 @@
-# meuapp
+# 🚔 Flutter Cyberpunk NCPD Project
 
-A new Flutter project.
+Sistema de gerenciamento policial inspirado no universo Cyberpunk 2077. O objetivo do projeto é fornecer uma plataforma de investigação criminal utilizada exclusivamente por agentes autorizados da NCPD, permitindo o gerenciamento de cidadãos, criminosos, veículos, evidências, incidentes e investigações.
 
-## Getting Started
+## 🏗 Arquitetura do Projeto
 
-This project is a starting point for a Flutter application.
+O projeto utiliza uma arquitetura baseada nos seguintes pilares:
+* Feature-Based Architecture
+* Domain Driven Design (DDD Simplificado)
+* Repository Pattern
+* Clean Separation of Concerns
+* Banco de Dados Local: SQLite + Floor ORM
 
-A few resources to get you started if this is your first Flutter project:
+## 📂 Estrutura de Diretórios
+Toda funcionalidade segue estritamente o fluxo de dependência: **Data → Domain → Presentation**.
+* `Presentation`: Interface (Screens, Widgets). Zero regras de negócio ou SQL.
+* `Domain`: Coração lógico (Models, Services, Repository Contracts).
+* `Data`: Persistência (Entities, DAOs, Mappers, Repository Implementations).
+* `Database`: Infraestrutura (Floor, Migrations).
+* `Core`: Recursos globais.
+* `Shared`: Componentes visuais do Design System NCPD.
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+## 🚀 Como Executar
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+1. Clone o repositório:
+   `git clone https://github.com/YH1d3k12/flutter-cyberpunk-ncpd.git`
+2. Instale as dependências:
+   `flutter pub get`
+3. Gere os arquivos do banco de dados (Floor):
+   `flutter pub run build_runner build --delete-conflicting-outputs`
+4. Execute o projeto (Multiplataforma habilitada):
+   `flutter run`

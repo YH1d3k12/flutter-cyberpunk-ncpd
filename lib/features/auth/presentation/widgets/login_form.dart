@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'login_button.dart';
-import '../../../shared/cyber_text_input.dart';
-import '../../../core/services/validator_login_username.dart';
-import '../../../core/services/validator_login_password.dart';
+import '../../../../shared/cyber_text_input.dart';
+import '../../../../core/services/validator_login_username.dart';
+import '../../../../core/services/validator_login_password.dart';
 
 class LoginForm extends StatelessWidget {
   final bool isLoading;

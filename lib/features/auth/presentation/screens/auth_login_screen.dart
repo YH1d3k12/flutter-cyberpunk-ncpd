@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:meuapp/shared/widgets/footer.dart';
-import '../../routes/app_routes.dart';
-import 'widgets/login_title.dart';
-import 'widgets/login_form.dart';
-import 'widgets/login_subtitle.dart';
-import '../../core/models/user.dart';
+import '../../../../shared/widgets/footer.dart';
+import '../../../../routes/app_routes.dart';
+import '../../../../core/models/user.dart';
+import '../widgets/login_title.dart';
+import '../widgets/login_form.dart';
+import '../widgets/login_subtitle.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});

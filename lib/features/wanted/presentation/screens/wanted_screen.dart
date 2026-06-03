@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import '../../shared/widgets/header.dart';
-import '../../shared/widgets/footer.dart';
-import '../wanted/widgets/wanted_header.dart';
-import '../wanted/widgets/wanted_portrait.dart';
-import '../wanted/widgets/wanted_info.dart';
-import '../wanted/widgets/wanted_level.dart';
-import '../wanted/widgets/wanted_reward.dart';
-import '../wanted/widgets/wanted_alert.dart';
+import '../../../../shared/widgets/header.dart';
+import '../../../../shared/widgets/footer.dart';
+import '../widgets/wanted_header.dart';
+import '../widgets/wanted_portrait.dart';
+import '../widgets/wanted_info.dart';
+import '../widgets/wanted_level.dart';
+import '../widgets/wanted_reward.dart';
+import '../widgets/wanted_alert.dart';
 
 class WantedScreen extends StatelessWidget {
   const WantedScreen({super.key});

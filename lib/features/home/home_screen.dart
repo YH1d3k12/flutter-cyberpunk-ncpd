@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../shared/widgets/header.dart';
 import '../../shared/widgets/footer.dart';
-import 'widgets/home_card.dart';
+import 'presentation/screens/home_card.dart';
 
 class HomeScreen extends StatelessWidget {
   final String? userName;

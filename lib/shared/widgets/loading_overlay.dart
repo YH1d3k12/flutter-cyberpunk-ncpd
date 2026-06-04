@@ -1,0 +1,56 @@
+import 'package:flutter/material.dart';
+import '../../core/theme/app_colors.dart';
+
+/// Full-screen loading overlay with cyberpunk styling.
+class LoadingOverlay extends StatelessWidget {
+  const LoadingOverlay({
+    super.key,
+    required this.isLoading,
+    required this.child,
+    this.message,
+  });
+
+  final bool isLoading;
+  final Widget child;
+  final String? message;
+
+  @override
+  Widget build(BuildContext context) {
+    return Stack(
+      children: [
+        child,
+        if (isLoading)
+          Container(
+            color: Colors.black54,
+            child: Center(
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  const SizedBox(
+                    width: 40,
+                    height: 40,
+                    child: CircularProgressIndicator(
+                      color: AppColors.primary,
+                      strokeWidth: 2,
+                    ),
+                  ),
+                  if (message != null) ...[
+                    const SizedBox(height: 16),
+                    Text(
+                      message!,
+                      style: const TextStyle(
+                        fontFamily: 'monospace',
+                        color: AppColors.primary,
+                        fontSize: 12,
+                        letterSpacing: 1.5,
+                      ),
+                    ),
+                  ],
+                ],
+              ),
+            ),
+          ),
+      ],
+    );
+  }
+}

@@ -1,20 +1,27 @@
-
 import 'package:flutter/material.dart';
-import '../features/auth/presentation/screens/auth_boot_screen.dart';
-import '../../features/home/home_screen.dart';
-import '../features/auth/presentation/screens/auth_login_screen.dart';
-import '../features/wanted/presentation/screens/wanted_screen.dart';
 
+import '../features/auth/presentation/screens/login_screen.dart';
+import '../features/home/home_screen.dart';
+import '../features/dashboard/presentation/screens/dashboard_screen.dart';
+import '../features/officers/presentation/screens/officers_list_screen.dart';
+import '../features/officers/presentation/screens/officer_form_screen.dart';
+
+/// Central routing table.
+/// All named routes are registered here – never scattered in screens.
 class AppRoutes {
-  static const boot = '/boot';
-  static const home = '/home';
-  static const wanted = '/wanted';
-  static const login = '/login';
+  AppRoutes._();
 
-  static Map<String, WidgetBuilder> routes = {
-    boot: (_) => const BootScreen(),
-    login: (_) => const LoginScreen(),
-    home: (_) => const HomeScreen(),
-    wanted: (_) => const WantedScreen()
+  static const String login         = '/';
+  static const String home          = '/home';
+  static const String dashboard     = '/dashboard';
+  static const String officers      = '/officers';
+  static const String officerCreate = '/officers/create';
+
+  static Map<String, WidgetBuilder> get routes => {
+    login:         (_) => const LoginScreen(),
+    home:          (_) => const LoginScreen(),
+    dashboard:     (_) => const DashboardScreen(),
+    officers:      (_) => const OfficersListScreen(),
+    officerCreate: (_) => const OfficerFormScreen(),
   };
 }

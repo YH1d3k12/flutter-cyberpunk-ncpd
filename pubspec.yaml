@@ -1,9 +1,11 @@
-name: cyberpunk_ncpd
-description: "A Flutter application that simulates a cyberpunk-themed police database, allowing users to search for and manage criminal records."
+name: flutter_cyberpunk_ncpd
+description: "NCPD System - Cyberpunk-themed police database management platform."
 publish_to: 'none'
 version: 1.0.0+1
+
 environment:
   sdk: ^3.11.0
+
 dependencies:
   flutter:
     sdk: flutter
@@ -12,11 +14,14 @@ dependencies:
   font_awesome_flutter: ^10.7.0
   floor: ^1.5.0
   sqflite: ^2.3.0
+  crypto: ^3.0.3
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
   floor_generator: ^1.5.0
   build_runner: ^2.4.6
   flutter_lints: ^6.0.0
+
 flutter:
   uses-material-design: true
